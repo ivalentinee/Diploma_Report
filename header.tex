@@ -1,0 +1,47 @@
+% Основные модули
+\usepackage{etoolbox}
+\usepackage{extsizes}
+\usepackage{cmap} % для кодировки шрифтов в pdf
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{cyrtimes}
+
+\usepackage{graphicx} % для вставки картинок
+\usepackage{amssymb,amsfonts,amsmath,amsthm} % математические дополнения от АМС
+\usepackage{indentfirst} % отделять первую строку раздела абзацным отступом тоже
+\usepackage[usenames,dvipsnames]{color} % названия цветов
+\usepackage{makecell}
+\usepackage{multirow} % улучшенное форматирование таблиц
+\usepackage{ulem} % подчеркивания
+
+% Поля страницы
+\usepackage{geometry}
+\geometry{left=3cm}
+\geometry{right=1.5cm}
+\geometry{top=2cm}
+\geometry{bottom=2cm}
+
+% Полуторный интервал
+\usepackage{setspace}
+\onehalfspacing
+% \usepackage[nodisplayskipstretch]{setspace}
+% \frenchspacing
+
+% Пропускаем номер главы (chapter) в Section
+\renewcommand*\thesection{\arabic{section}}
+
+% Настройки содержания
+\input{./contents.tex}
+
+% Включаемый переност строки
+\newtoggle{breakpage}
+
+\newcommand{\condbreak}{
+  \iftoggle{breakpage}{
+    \pagebreak
+  }
+}
+
+% Включение/выключение переноса строки
+\toggletrue{breakpage}

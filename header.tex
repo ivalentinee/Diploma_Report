@@ -14,25 +14,23 @@
 \usepackage{makecell}
 \usepackage{multirow} % улучшенное форматирование таблиц
 \usepackage{ulem} % подчеркивания
+\usepackage[hidelinks]{hyperref}
 
 % Поля страницы
 \usepackage{geometry}
-\geometry{left=3cm}
-\geometry{right=1.5cm}
-\geometry{top=2cm}
-\geometry{bottom=2cm}
+\geometry{left=3cm, right=1.5cm, top=2cm, bottom=2cm}
 
 % Полуторный интервал
 \usepackage{setspace}
 \onehalfspacing
 % \usepackage[nodisplayskipstretch]{setspace}
-% \frenchspacing
-
-% Пропускаем номер главы (chapter) в Section
-\renewcommand*\thesection{\arabic{section}}
+\frenchspacing
 
 % Настройки содержания
 \input{./contents.tex}
+
+% Настройки заголовков
+\input{./titles.tex}
 
 % Включаемый переност строки
 \newtoggle{breakpage}
@@ -45,3 +43,7 @@
 
 % Включение/выключение переноса строки
 \toggletrue{breakpage}
+
+\newcommand{\dnd}{
+  D\&D
+}

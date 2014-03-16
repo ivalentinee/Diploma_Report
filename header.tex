@@ -18,6 +18,7 @@
 \usepackage{lscape} % для альбомной ориентации страниц
 \usepackage{import}
 \usepackage{textcase}
+\usepackage{enumitem}
 
 % Поля страницы
 \usepackage{geometry}
@@ -29,6 +30,12 @@
 % \usepackage[nodisplayskipstretch]{setspace}
 \frenchspacing
 
+% расстояние между элементами списка
+\setlist[enumerate]{topsep=0pt,itemsep=-1ex,partopsep=1ex,parsep=1ex}
+% чтобы работал русский для enumitem
+\AddEnumerateCounter{\Asbuk}{\@Asbuk}{\CYRM}
+\AddEnumerateCounter{\asbuk}{\@asbuk}{\cyrm}
+
 % Настройки содержания
 \input{./contents.tex}
 
@@ -37,6 +44,8 @@
 
 % Тире в списках вместо точек
 \def\labelitemi{--}
+
+\renewcommand{\labelenumii}{\asbuk{enumii}.}
 
 % Включаемый переност строки
 \newtoggle{breakpage}

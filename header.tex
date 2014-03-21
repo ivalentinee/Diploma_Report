@@ -1,6 +1,5 @@
 % Основные модули
 \usepackage{etoolbox}
-\usepackage{extsizes}
 \usepackage{cmap} % для кодировки шрифтов в pdf
 \usepackage[T2A]{fontenc}
 \usepackage[utf8]{inputenc}
@@ -9,27 +8,17 @@
 
 \usepackage{graphicx} % для вставки картинок
 \usepackage{amssymb,amsfonts,amsmath,amsthm} % математические дополнения от АМС
-\usepackage{indentfirst} % отделять первую строку раздела абзацным отступом тоже
 \usepackage[usenames,dvipsnames]{color} % названия цветов
 \usepackage{makecell}
 \usepackage{multirow} % улучшенное форматирование таблиц
-\usepackage{ulem} % подчеркивания
-\usepackage[hidelinks]{hyperref}
+\usepackage[unicode,hidelinks]{hyperref}
 \usepackage{lscape} % для альбомной ориентации страниц
 \usepackage{import}
 \usepackage{textcase}
 \usepackage{enumitem}
-\usepackage[center]{caption}
+\usepackage{ulem} % подчеркивания
 
-% Поля страницы
-\usepackage{geometry}
-\geometry{left=3cm, right=1.5cm, top=2cm, bottom=2cm}
-
-% Полуторный интервал
-\usepackage{setspace}
-\onehalfspacing
-% \usepackage[nodisplayskipstretch]{setspace}
-\frenchspacing
+\input{eskd_header.tex}
 
 % расстояние между элементами списка
 \setlist[enumerate]{topsep=0pt,itemsep=-1ex,partopsep=1ex,parsep=1ex}
@@ -37,15 +26,7 @@
 \AddEnumerateCounter{\Asbuk}{\@Asbuk}{\CYRM}
 \AddEnumerateCounter{\asbuk}{\@asbuk}{\cyrm}
 
-% Настройки содержания
-\input{./contents.tex}
-
-% Настройки заголовков
-\input{./titles.tex}
-
-% Тире в списках вместо точек
-\def\labelitemi{--}
-
+\renewcommand{\labelenumi}{\arabic{enumi}.}
 \renewcommand{\labelenumii}{\asbuk{enumii}.}
 
 % Включаемый переност строки

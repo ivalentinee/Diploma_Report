@@ -1,0 +1,47 @@
+%%% \no вместо №
+\newcommand{\No}{\textnumero}
+%%% Для работы ESKDX
+\usepackage{xecyr}
+%%% Для работы шрифтов
+\usepackage{xltxtra}
+%%% Times New Roman - как основной шрифт
+\setmainfont[Mapping=tex-text]{Times New Roman}
+%%% Courier New - для моноширного текста
+\setmonofont[Scale=MatchLowercase]{Courier New}
+%%% Стандартные сочетания символов ---, --, << >> и т.п.
+\defaultfontfeatures{Mapping=tex-text}
+%%% Переносы в русских текстах
+\usepackage{polyglossia}
+\setdefaultlanguage{russian}
+\newfontfamily\russianfont{Times New Roman}
+%%% Перенос составных слов
+\XeTeXinterchartokenstate=1
+\XeTeXcharclass `\- 24
+\XeTeXinterchartoks 24 0 ={\hskip 0pt plus0pt minus0pt}
+\XeTeXinterchartoks 0 24 ={\nobreak}
+%%% Подпись к рисункам вида «Рисунок 1»
+\addto{\captionsrussian}{\renewcommand{\figurename}{Рисунок}}
+%%% Перенос слов, которые не умещаются в строке
+\sloppy
+%%% Гостовские шрифты в рамках
+\renewcommand{\ESKDfontShape}{\fontspec[BoldFont={GOST type B}]{GOST type A}}
+\renewcommand{\ESKDfontShape}{\fontspec[ItalicFont={GOST type A Italic}]{GOST type A Italic}}
+
+% смена типа листа по ЕСКД
+\usepackage{eskdchngsheet}
+
+
+% Название курсового проекта
+\ESKDtitle{Система управления игровым процессом для настольной ролевой игры <<Dungeons \& Dragons 3.5>>}
+% Шифр проекта
+%% \ESKDsignature{}
+% Автор курсового проекта
+\ESKDauthor{Ионов В.С.}
+% Утверждено (для титульного листа по ЕСКД)
+\ESKDtitleApprovedBy{ст. преподаватель каф. ИВК}{Кандаулов В.М.}
+% Дата создания документа
+\ESKDdate{2014/03/21}
+% Учебная группа
+\ESKDcolumnIX{ИСТд-51}
+% Проверил
+\ESKDcolumnXIfII{Кандаулов В.М.}

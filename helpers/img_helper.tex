@@ -1,0 +1,36 @@
+\newcommand{\portraitImg}[5][h]{
+  \begin{figure}[#1]
+  \center{\includegraphics[width=#2\linewidth]{#3}}
+  \caption{#4}
+  \label{img:#5}
+  \end{figure}
+}
+
+
+\newcommand{\landscapeImg}[5][h]{
+  \begin{landscape}
+    \vspace*{\fill}
+    \begin{figure}[#1]
+    \center{\includegraphics[width=#2\linewidth]{#3}}
+    \caption{#4}
+    \label{img:#5}
+    \end{figure}
+    \vspace*{\fill}
+  \end{landscape}
+}
+
+
+\newcommand{\portraitImgTwo}[6][h]{
+  \begin{figure}[#1]
+    \begin{minipage}[h]{\linewidth/2}
+      \flushright{\includegraphics[width=#2\linewidth]{#3}}
+    \end{minipage}
+    \hspace{1pt}
+    \begin{minipage}[h]{\linewidth/2}
+      \flushleft{\includegraphics[width=#2\linewidth]{#4}}
+    \end{minipage}
+    \caption{#5}
+    \label{img:#6}
+  \end{figure}
+}
+

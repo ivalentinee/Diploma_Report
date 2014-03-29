@@ -9,11 +9,22 @@
 
 \newcommand{\landscapeImg}[5][h]{
   \begin{landscape}
+    \begin{figure}[#1]
+      \center{\includegraphics[width=#2\linewidth]{#3}}
+      \caption{#4}
+      \label{img:#5}
+    \end{figure}
+  \end{landscape}
+}
+
+
+\newcommand{\landscapeImgCenter}[5][h]{
+  \begin{landscape}
     \vspace*{\fill}
     \begin{figure}[#1]
-    \center{\includegraphics[width=#2\linewidth]{#3}}
-    \caption{#4}
-    \label{img:#5}
+      \center{\includegraphics[width=#2\linewidth]{#3}}
+      \caption{#4}
+      \label{img:#5}
     \end{figure}
     \vspace*{\fill}
   \end{landscape}

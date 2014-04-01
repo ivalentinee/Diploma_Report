@@ -4,21 +4,22 @@
 
 ## Зависимости
 
-Для сборки проекта необходимы следующие пакеты (Debian Wheezy):
+Для сборки ПЗ в Debian 7 (Wheezy) необходимо установить следующие пакеты:
 
-1. texlive-common
-2. texlive-latex-extra
-3. texlive-lang-cyrillic
-4. texlive-xetex
-5. scalable-cyrfonts-tex
-6. ttf-mscorefonts-installer
+1. texlive (main)
+2. texlive-lang-cyrillic (main)
+3. texlive-latex-extra (main)
+4. texlive-fonts-extra (main)
+5. texlive-xetex (main) 
+6. scalable-cyrfonts-tex (main)
+7. ttf-mscorefonts-installer (contrib) 
 
-Все пакеты в Debian Wheezy устанавливаются следующей командой:
+Одной командой:
 
-    $ sudo apt-get install texlive-common texlive-latex-extra texlive-lang-cyrillic texlive-xetex scalable-cyrfonts-tex ttf-mscorefonts-installer
+    $ sudo apt-get install texlive texlive-lang-cyrillic texlive-latex-extra texlive-fonts-extra texlive-xetex scalable-cyrfonts-tex ttf-mscorefonts-installer
 
 ## Сборка и Xetex
 
-Теперь для сборки проекта нужен xetex для работы шрифтов ГОСТ.
+Теперь для работы шрифтов ГОСТ нужен XeTeX:
 
-    $ xelatex report.pdf
+    $ xelatex report.tex

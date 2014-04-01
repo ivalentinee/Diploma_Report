@@ -3,7 +3,7 @@
 
 api         = "2"
 box         = "debian-wheezy-amd64-latex"
-url         = "https://www.dropbox.com/s/tpd7avonnrime17/debian-wheezy-amd64-texlive.box"
+url         = "https://dl.dropboxusercontent.com/s/tpd7avonnrime17/debian-wheezy-amd64-texlive.box"
 
 hostname    = "buildbox"
 domain      = "local"

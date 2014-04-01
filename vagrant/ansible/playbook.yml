@@ -1,0 +1,20 @@
+---
+
+- hosts: vagrant
+  user: vagrant
+  sudo: True
+
+  vars:
+    repository_basedir: ../..
+
+  vars_files:
+    # Базовые параметры
+    - roles/basic/vars/main.yml
+    # Параметры texlive
+    - roles/latex/vars/main.yml
+
+  tasks:
+    # Устанавливаем базовые компоненты
+    - include: roles/basic/tasks/setup.yml
+    # Устанавливаем компоненты texlive
+    - include: roles/latex/tasks/setup.yml

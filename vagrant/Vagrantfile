@@ -1,0 +1,45 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+api         = "2"
+box         = "debian-wheezy-amd64-latex"
+url         = "https://www.dropbox.com/s/tpd7avonnrime17/debian-wheezy-amd64-texlive.box"
+
+hostname    = "buildbox"
+domain      = "local"
+ram         = "1024"
+
+project     = "../"
+mountdir    = "/srv"
+
+Vagrant.configure(api) do |config|
+  config.vm.box = box
+  config.vm.box_url = url
+  config.vm.network "private_network", :ip => '172.17.0.2'
+  config.vm.network "public_network"
+  config.vm.host_name = hostname + '.' + domain
+  config.vm.synced_folder project, mountdir,
+        :owner => "vagrant",
+        :group => "vagrant",
+        :mount_options => ["dmode=775","fmode=775"]
+
+  config.vm.provider :virtualbox do |vb|
+    vb.gui = false
+    vb.customize [
+      'modifyvm', :id,
+      '--memory', ram,
+      '--name',   hostname + '.' + domain
+    ]
+  end
+
+  config.vm.provision :ansible do |ansible|
+    ansible.playbook = "ansible/playbook.yml"
+    ansible.inventory_path = "ansible/inventory"
+    # Debug
+    # ansible.raw_arguments = ['-vvvv']
+    ansible.extra_vars = { config: {
+        fonts: mountdir + '/fonts'
+      }
+    }
+  end
+end

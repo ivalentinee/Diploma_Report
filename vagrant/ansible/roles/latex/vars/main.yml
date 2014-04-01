@@ -1,0 +1,12 @@
+# File: main.yml
+# Part: latex
+
+latex: {
+  packages: [ "texlive",
+              "texlive-lang-cyrillic", 
+              "scalable-cyrfonts-tex",
+              "texlive-latex-extra",
+              "texlive-xetex", 
+              "texlive-fonts-extra",
+              "ttf-mscorefonts-installer" ]
+}

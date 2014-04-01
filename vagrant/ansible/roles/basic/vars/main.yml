@@ -1,0 +1,6 @@
+# File: main.yml
+# Part: basic
+
+basic: {
+  packages: [ "mc", "iotop", "vim", "screen", "htop", "git", "nmap", "tmux", "zsh" ]
+}

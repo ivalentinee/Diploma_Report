@@ -1,0 +1,19 @@
+---
+# file: roles/basic/tasks/setup.yml
+
+- name: Basic | Обновляем репозиторий
+  apt: update_cache=yes
+  tags: basic
+
+- name: Basic | Устанавливаем базовые приложения и утилиты
+  apt: pkg={{ item }} state=installed
+  with_items: basic.packages
+  tags: basic
+
+- name: Basic | Устанавливаем специфичные приложения и утилиты
+  apt: pkg={{ item }} state=installed
+  with_items:
+    - python-apt
+    - python-pycurl
+    - python-software-properties
+  tags: basic

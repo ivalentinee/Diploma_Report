@@ -1,0 +1,25 @@
+---
+# file: roles/basic/tasks/setup.yml
+
+- name: Texlive | Устанавливаем зависимости (компоненты, библиотеки и шрифты)
+  apt: pkg={{ item }} state=installed
+  with_items: latex.packages
+  tags: latex
+
+- name: Texlive | Создаем каталог ГОСТ
+  file: path=/usr/share/fonts/truetype/gost state=directory
+  tags: latex
+
+- name: Texlive | Загружаем шрифты ГОСТ
+  copy: src={{ item }} dest=/usr/share/fonts/truetype/gost
+  with_fileglob:
+    - "{{config.fonts}}/gost/*"
+  tags: latex
+
+- name: Texlive | Проверяем установку fontconfig
+  apt: pkg=fontconfig state=installed
+  tags: latex
+
+- name: Texlive | Обновляем шрифтовой кеш
+  command: "fc-cache -fv"
+  tags: latex

@@ -1,0 +1,52 @@
+\subsubsection{Логическая модель данных}
+
+\begin{longtable}[h]{| p{0.04\textwidth} | p{0.3\textwidth} | p{0.5\textwidth} |}
+\caption{\label{tab:logic_db_struct}Сущности логической модели данных.} \\
+  \hline
+  №  &  Название сущности    &  Описание       \\
+\endfirsthead
+\tableContinue{3}
+  \\ \hline
+\endhead
+  \hline
+  1  &  Пользователь          &   Данные пользователя                                               \\
+  \hline
+  2  &  Данные аутентификации &   Информация, необходимая для аутентификации пользователя в системе \\
+  \hline
+  3  &  Игра                  &   Данные игры                                                       \\
+  \hline
+  4  &  Сессия                &   Данные игровой сессии                                             \\
+  \hline
+  5  &  Приглашение в игру    &   Приглашение в игру                                                \\
+  \hline
+  6  &  Комментарий           &   Предмет и содержании комментария                                  \\
+  \hline
+  7  &  Персонаж              &   Общие данные персонажа                                            \\
+  \hline
+  8  &  Уровень персонажа     &   Данные персонажа, характерные для конкретного уровня              \\
+  \hline
+  9  &  Раса                  &   Данные игровой расы                                               \\
+  \hline
+  10 &  Класс                 &   Данные игрового класса                                            \\
+  \hline
+  11 &  Классовый уровень     &   Данные уровня игрового класса                                     \\
+  \hline
+  12 &  Свойство              &   Параметр сущности предметной области                              \\
+  \hline
+  13 &  Модификатор           &   Значение свойства объекта                                         \\
+  \hline
+\end{longtable}
+
+\subimport{logical_model/}{user}
+\subimport{logical_model/}{auth_data}
+\subimport{logical_model/}{game}
+\subimport{logical_model/}{session}
+\subimport{logical_model/}{invitation}
+\subimport{logical_model/}{comment}
+\subimport{logical_model/}{character}
+\subimport{logical_model/}{character_level}
+\subimport{logical_model/}{race}
+\subimport{logical_model/}{class}
+\subimport{logical_model/}{class_level}
+\subimport{logical_model/}{property}
+\subimport{logical_model/}{modifier}

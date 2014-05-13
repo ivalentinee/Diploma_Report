@@ -22,8 +22,15 @@
 
 \input{eskd_header.tex}
 
+
+\newcolumntype{C}[1]{>{\centering\arraybackslash\hspace{0pt}}p{#1}}
+
 % расстояние между элементами списка
-\setlist[enumerate]{topsep=0pt,itemsep=-1ex,partopsep=1ex,parsep=1ex}
+%% \setlist[enumerate]{topsep=0pt,itemsep=-1ex,partopsep=1ex,parsep=1ex}
+\setlist[itemize]{leftmargin=1.5cm,nolistsep}
+\setlist[enumerate]{leftmargin=1.5cm,nolistsep}
+
+\captionsetup[longtable]{justification=raggedleft}
 % чтобы работал русский для enumitem
 \AddEnumerateCounter{\Asbuk}{\@Asbuk}{\CYRM}
 \AddEnumerateCounter{\asbuk}{\@asbuk}{\cyrm}

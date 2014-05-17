@@ -1,0 +1,30 @@
+\begin{longtable}[h]{| p{0.04\textwidth} | p{0.21\textwidth} | p{0.19\textwidth} | p{0.18\textwidth} | p{0.22\textwidth} |}
+\caption{\label{tab:physical_class_attriutes}Таблица физической модели \textbf{Class}.} \\
+  \hline
+  \textbf{№}  &  \textbf{Название атрибута}  &  \textbf{Тип и размер}  &  \textbf{Значение по умолчанию}  &  \textbf{Допустимые значения} \\
+\endfirsthead
+\tableContinue{5}
+  \\ \hline
+  \textbf{№}  &  \textbf{Название атрибута}  &  \textbf{Тип и размер}  &  \textbf{Значение по умолчанию}  &  \textbf{Допустимые значения} \\
+  \hline
+\endhead
+  \hline
+  1 &  id                  &  INTEGER(4)    &  ---   &  1...2147483647  \\
+  \hline                                    
+  2 &  name                &  STRING(255)   &  NULL  &  ---             \\
+  \hline
+  3 &  description         &  TEXT          &  NULL  &  ---             \\
+  \hline
+  4 &  alignment           &  STRING ARRAY  &  NULL  &  ---             \\
+  \hline
+  5 &  hit\_die            &  INTEGER(4)    &  NULL  &  1...2147483647  \\
+  \hline
+  6 &  skill\_points       &  INTEGER(4)    &  NULL  &  1...2147483647  \\
+  \hline
+  7 &  level\_modificator  &  INTEGER(4)    &  0     &  1...2147483647  \\
+  \hline
+  8 &  created\_at         &  TIMESTAMP     &  NULL  &  ---             \\
+  \hline
+  9 &  updated\_at         &  TIMESTAMP     &  NULL  &  ---             \\
+  \hline
+\end{longtable}

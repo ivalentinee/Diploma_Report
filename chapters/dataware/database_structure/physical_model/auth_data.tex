@@ -1,0 +1,24 @@
+\begin{longtable}[h]{| p{0.04\textwidth} | p{0.21\textwidth} | p{0.19\textwidth} | p{0.18\textwidth} | p{0.22\textwidth} |}
+\caption{\label{tab:physical_auth_data_attriutes}Таблица физической модели \textbf{AuthData}.} \\
+  \hline
+  \textbf{№}  &  \textbf{Название атрибута}  &  \textbf{Тип и размер}  &  \textbf{Значение по умолчанию}  &  \textbf{Допустимые значения} \\
+\endfirsthead
+\tableContinue{5}
+  \\ \hline
+  \textbf{№}  &  \textbf{Название атрибута}  &  \textbf{Тип и размер}  &  \textbf{Значение по умолчанию}  &  \textbf{Допустимые значения} \\
+  \hline
+\endhead
+  \hline
+  1 &  id           &  INTEGER(4)  &  ---   &  1...2147483647  \\
+  \hline               
+  2 &  provider     &  STRING(255) &  NULL  &  ---             \\
+  \hline               
+  3 &  uid          &  STRING(255) &  NULL  &  ---             \\
+  \hline               
+  4 &  user\_id     &  INTEGER(4)  &  ---   &  1...2147483647  \\
+  \hline               
+  5 &  created\_at  &  TIMESTAMP   &  NULL  &  ---             \\
+  \hline               
+  6 &  updated\_at  &  TIMESTAMP   &  NULL  &  ---             \\
+  \hline
+\end{longtable}

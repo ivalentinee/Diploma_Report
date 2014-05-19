@@ -1,3 +1,41 @@
 \subsection{Выбор средств управления данными}
 
-%% mysql vs postgres vs ещё что-нибудь
+%% mysql vs postgres vs ещё что-нибудь vs oracle
+
+В рамках проектирования системы для выбора СУБД были выбраны основные критерии:
+\begin{itemize}
+\item СУБД должна быть реляционной;
+\item должна работать на ОС Linux;
+\item должна оспользовать язык SQL для совершения операций;
+\item должна поддерживать все основные типы данных.
+\end{itemize}
+
+На основе указанных критериев были выбраны три СУБД:
+\begin{enumerate}
+\item PostgreSQL.
+\item MySQL.
+\item Oracle DataBase.
+\end{enumerate}
+
+Для дальнейшего выбора был проведён анализ по дополнительным критериям.
+
+\begin{longtable}[h]{| m{0.35\textwidth} | m{0.15\textwidth} | m{0.15\textwidth} | m{0.15\textwidth} |}
+\caption{\label{tab:db_compare}Сравнение СУБД.} \\
+  \hline
+  \textbf{Критерий}  &  \textbf{PostgreSQL}  &  \textbf{MySQL}  &  \textbf{Oracle Database} \\
+\endfirsthead
+\tableContinue{4} \\
+  \hline
+  \textbf{Критерий}  &  \textbf{PostgreSQL}  &  \textbf{MySQL}  &  \textbf{Oracle Database} \\
+  \hline
+\endhead
+  \hline
+  Платность  &  Бесплатная  &  Бесплатная  &  Платная  \\
+  \hline
+  Поддержка массивов  &  Да  &  Нет  &  Да  \\
+  \hline
+  Подробная документация  &  Да  &  Да  &  Да  \\
+  \hline
+  Наличие средства редактирования с современным пользовательским интерфейсом  &  Да  &  Да  &  Да  \\
+  \hline
+\end{longtable}

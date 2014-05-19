@@ -1,41 +1,44 @@
 \subsection{Выбор средств управления данными}
 
-%% mysql vs postgres vs ещё что-нибудь vs oracle
-
 В рамках проектирования системы для выбора СУБД были выбраны основные критерии:
 \begin{itemize}
 \item СУБД должна быть реляционной;
 \item должна работать на ОС Linux;
-\item должна оспользовать язык SQL для совершения операций;
+\item должна использовать язык SQL для совершения операций;
 \item должна поддерживать все основные типы данных.
 \end{itemize}
 
-На основе указанных критериев были выбраны три СУБД:
+На основе указанных критериев были выбраны четыре СУБД:
 \begin{enumerate}
 \item PostgreSQL.
 \item MySQL.
-\item Oracle DataBase.
+\item SQLite.
+\item Oracle Database.
 \end{enumerate}
 
 Для дальнейшего выбора был проведён анализ по дополнительным критериям.
 
-\begin{longtable}[h]{| m{0.35\textwidth} | m{0.15\textwidth} | m{0.15\textwidth} | m{0.15\textwidth} |}
+\begin{longtable}[h]{| m{0.32\textwidth} | m{0.14\textwidth} | m{0.115\textwidth} | m{0.115\textwidth} | m{0.11\textwidth} |}
 \caption{\label{tab:db_compare}Сравнение СУБД.} \\
   \hline
-  \textbf{Критерий}  &  \textbf{PostgreSQL}  &  \textbf{MySQL}  &  \textbf{Oracle Database} \\
+  \textbf{Критерий}  &  \textbf{PostgreSQL}  &  \textbf{MySQL}  &  \textbf{Oracle Database}  &  \textbf{SQLite} \\
 \endfirsthead
 \tableContinue{4} \\
   \hline
-  \textbf{Критерий}  &  \textbf{PostgreSQL}  &  \textbf{MySQL}  &  \textbf{Oracle Database} \\
+  \textbf{Критерий}  &  \textbf{PostgreSQL}  &  \textbf{MySQL}  &  \textbf{Oracle Database}  &  \textbf{SQLite} \\
   \hline
 \endhead
   \hline
-  Платность  &  Бесплатная  &  Бесплатная  &  Платная  \\
+  Бесплатная              &  Да  &  Да   &  Нет  &  Да   \\
   \hline
-  Поддержка массивов  &  Да  &  Нет  &  Да  \\
+  Поддержка массивов      &  Да  &  Нет  &  Да   &  Нет  \\
   \hline
-  Подробная документация  &  Да  &  Да  &  Да  \\
+  Подробная документация  &  Да  &  Да   &  Да   &  Да   \\
   \hline
-  Наличие средства редактирования с современным пользовательским интерфейсом  &  Да  &  Да  &  Да  \\
+  Высокопроизводительная  &  Да  &  Да   &  Да   &  Нет  \\
+  \hline
+  Поддержка репликации    &  Да  &  Да   &  Да   &  Нет  \\
   \hline
 \end{longtable}
+
+В таблице~\ref{tab:db_compare} представлен сравнительный анализ СУБД на основе дополнительных критериев. По результатам данного анализа видно, что наиболее подходящей СУБД является \textbf{PostgreSQL}.

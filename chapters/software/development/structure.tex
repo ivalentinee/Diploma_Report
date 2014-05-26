@@ -4,19 +4,83 @@
 \paragraph{Аутентификация пользователей в системе}
 
 Данный модуль предоставляет возможность аутентификации в системе. Для аутентификации используется сервис Google.
+%% Файлы:
+app/controllers/web/games/sessions\_controller.rb : 28 lines
+app/controllers/web/users/application\_controller.rb : 3 lines
+app/models/auth\_data.rb : 2 lines
+
 
 \paragraph{Модуль общеигровых данных}
 
 Данный модуль предоставляет возможность создания, редактирования, отображения и удаления общеигровых данных.
+%% Файлы:
+app/controllers/api/properties\_controller.rb : 12 lines
+app/controllers/web/races\_controller.rb : 25 lines
+app/controllers/web/klasses\_controller.rb : 27 lines
+app/controllers/api/races\_controller.rb : 8 lines
+app/models/klass.rb : 3 lines
+app/models/level.rb : 2 lines
+app/models/modifier.rb : 3 lines
+app/models/property.rb : 2 lines
+app/models/race.rb : 3 lines
+app/repositories/property\_repository.rb : 5 lines
+app/assets/javascripts/web/klasses.js.coffee : 24 lines
+
 
 \paragraph{Модуль управление игровым процессом}
 
 Данный модуль предоставляет возможность создания, редактирования, отображения и удаления игр и игровых сессий.
+%% Файлы:
+app/controllers/web/games\_controller.rb : 27 lines
+app/controllers/web/games/sessions\_controller.rb : 28 lines
+app/controllers/web/invitations\_controller.rb : 21 lines
+app/controllers/web/games/application\_controller.rb : 3 lines
+app/controllers/web/games/invitations\_controller.rb : 22 lines
+app/controllers/web/games/sessions/application\_controller.rb : 3 lines
+app/controllers/web/users/games\_controller.rb : 4 lines
+app/helpers/web/invitations\_helper.rb : 5 lines
+app/models/game.rb : 8 lines
+app/models/game\_character.rb : 4 lines
+app/models/invitation.rb : 5 lines
+app/models/session.rb : 8 lines
+app/repositories/game\_repository.rb : 9 lines
 
 \paragraph{Модуль записей игры}
 
 Данный модуль предоставляет возможность добавления заметок к играм и игровым сессиям.
+%% Файлы:
+app/controllers/web/games/comments\_controller.rb : 17 lines
+app/controllers/web/games/sessions/comments\_controller.rb : 18 lines
+app/models/comment.rb : 3 lines
+
 
 \paragraph{Автоматизированное создание персонажей}
 
 Данный модуль предоставляет возможность создания, редактирования, отображения и удаления общеигровых данных с частичной автоматизацией.
+%% Файлы:
+app/controllers/api/characters\_controller.rb : 24 lines
+app/controllers/web/characters\_controller.rb : 16 lines
+app/controllers/web/users/characters\_controller.rb : 4 lines
+app/models/character.rb : 8 lines
+app/models/charlevel.rb : 5 lines
+app/repositories/character\_repository.rb : 4 lines
+app/assets/javascripts/angular/app.js.coffee : 1 line
+app/assets/javascripts/angular/controllers/character\_builder.js.coffee : 90 lines
+
+
+\paragraph{Управление учётными записями}
+%% Файлы:
+app/controllers/web/users\_controller.rb : 18 lines
+app/models/user.rb : 15 lines
+app/repositories/user\_repository.rb : 5 lines
+
+\paragraph{Конфигурация маршрутизатора}
+%% Файлы:
+config/routes.rb : 29 lines
+
+
+\paragraph{Файлы, обеспечивающие межмодульное взаимодействие}
+%% Файлы:
+app/controllers/api/application\_controller.rb : 7 lines
+app/helpers/web/application\_helper.rb : 11 lines
+app/controllers/web/application\_controller.rb : 8 lines

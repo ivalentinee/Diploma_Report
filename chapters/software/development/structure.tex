@@ -30,6 +30,30 @@
 \item app/models/race.rb --- 3 строки
 \item app/repositories/property\_repository.rb --- 5 строк
 \item app/assets/javascripts/web/klasses.js.coffee --- 24 строки
+\item app/views/api/application/\_modifiers.json.jbuilder --- 3 строки
+\item app/views/api/classes/\_levels.json.jbuilder --- 4 строки
+\item app/views/api/classes/index.json.jbuilder --- 4 строки
+\item app/views/api/classes/show.json.jbuilder --- 3 строки
+\item app/views/api/properties/index.json.jbuilder --- 1 строка
+\item app/views/api/properties/show.json.jbuilder --- 1 строка
+\item app/views/api/races/index.json.jbuilder --- 1 строка
+\item app/views/api/races/show.json.jbuilder --- 3 строки
+\item app/views/web/application/\_requirement\_form.html.haml --- 7 строк
+\item app/views/web/application/\_modifier\_form.html.haml --- 7 строк
+\item app/views/web/application/\_property\_skill\_fields.html.haml --- 10 строк
+\item app/views/web/application/\_property\_ability\_fields.html.haml --- 10 строк
+\item app/views/web/klasses/index.html.haml --- 13 строк
+\item app/views/web/klasses/new.html.haml --- 4 строки
+\item app/views/web/klasses/edit.html.haml --- 6 строк
+\item app/views/web/klasses/show.html.haml --- 4 строки
+\item app/views/web/klasses/\_form.html.haml --- 26 строк
+\item app/views/web/klasses/\_level\_fields.html.haml --- 12 строк
+\item app/views/web/races/index.html.haml --- 13 строк
+\item app/views/web/races/new.html.haml --- 3 строки
+\item app/views/web/races/edit.html.haml --- 5 строк
+\item app/views/web/races/show.html.haml --- 4 строки
+\item app/views/web/races/\_form.html.haml --- 8 строк
+\item app/views/web/users/characters/index.html.haml --- 15 строк
 \end{enumerate}
 
 
@@ -52,6 +76,24 @@
 \item app/models/invitation.rb --- 5 строк
 \item app/models/session.rb --- 8 строк
 \item app/repositories/game\_repository.rb --- 9 строк
+\item app/views/web/invitations/index.html.haml --- 18 строк
+\item app/views/web/invitations/show.html.haml --- 4 строки
+\item app/views/web/invitations/accept.html.haml --- 5 строк
+\item app/views/web/games/new.html.haml --- 3 строки
+\item app/views/web/games/index.html.haml --- 19 строк
+\item app/views/web/games/edit.html.haml --- 5 строк
+\item app/views/web/games/show.html.haml --- 30 строк
+\item app/views/web/games/\_form.html.haml --- 10 строк
+\item app/views/web/games/invitations/index.html.haml --- 12 строк
+\item app/views/web/games/invitations/new.html.haml --- 3 строки
+\item app/views/web/games/invitations/show.html.haml --- 3 строки
+\item app/views/web/games/invitations/\_form.html.haml --- 4 строки
+\item app/views/web/games/sessions/index.html.haml --- 13 строк
+\item app/views/web/games/sessions/new.html.haml --- 3 строки
+\item app/views/web/games/sessions/edit.html.haml --- 5 строк
+\item app/views/web/games/sessions/show.html.haml --- 13 строк
+\item app/views/web/games/sessions/\_form.html.haml --- 8 строк
+\item app/views/web/users/games/index.html.haml --- 12 строк
 \end{enumerate}
 
 
@@ -64,6 +106,10 @@
 \item app/controllers/web/games/comments\_controller.rb --- 17 строк
 \item app/controllers/web/games/sessions/comments\_controller.rb --- 18 строк
 \item app/models/comment.rb --- 3 строки
+\item app/views/web/games/comments/\_form.html.haml --- 3 строки
+\item app/views/web/games/comments/\_comment.html.haml --- 6 строк
+\item app/views/web/games/sessions/comments/\_form.html.haml --- 3 строки
+\item app/views/web/games/sessions/comments/\_comment.html.haml --- 6 строк
 \end{enumerate}
 
 
@@ -81,6 +127,11 @@
 \item app/repositories/character\_repository.rb --- 4 строки
 \item app/assets/javascripts/angular/app.js.coffee --- 1 строка
 \item app/assets/javascripts/angular/controllers/character\_builder.js.coffee --- 90 строк
+\item app/views/web/characters/index.html.haml --- 20 строк
+\item app/views/web/characters/new.html.haml --- 3 строк
+\item app/views/web/characters/edit.html.haml --- 5 строк
+\item app/views/web/characters/show.html.haml --- 11 строк
+\item app/views/web/characters/\_form.html.haml --- 62 строк
 \end{enumerate}
 
 
@@ -93,16 +144,33 @@
 \item app/controllers/web/users\_controller.rb --- 18 строк
 \item app/models/user.rb --- 15 строк
 \item app/repositories/user\_repository.rb --- 5 строк
+\item app/views/web/users/index.html.haml --- 14 строк
+\item app/views/web/users/edit.html.haml --- 5 строк
+\item app/views/web/users/show.html.haml --- 6 строк
+\item app/views/web/users/\_form.html.haml --- 10 строк
 \end{enumerate}
 
 
 \paragraph{Конфигурация маршрутизатора}
 
-Данный модель отвечает за конфигурацию маршрутов RubyOnRails-приложения.
+Данный модуль отвечает за конфигурацию маршрутов RubyOnRails-приложения.
 
 Список файлов, входящих в модуль:
 \begin{enumerate}[label=\arabic*)]
 \item config/routes.rb --- 29 строк
+\end{enumerate}
+
+
+\paragraph{Модуль статических страниц}
+
+Данный модель содержит статические страницы приложения.
+
+\begin{enumerate}[label=\arabic*)]
+\item app/views/web/application/\_navbar.html.haml --- 7 строк
+\item app/views/web/pages/about.en.html.haml --- 2 строки
+\item app/views/web/pages/index.en.html.haml --- 5 строк
+\item app/views/web/pages/about.ru.html.haml --- 2 строки
+\item app/views/web/pages/index.ru.html.haml --- 5 строк
 \end{enumerate}
 
 
@@ -115,4 +183,5 @@
 \item app/controllers/api/application\_controller.rb --- 7 строк
 \item app/helpers/web/application\_helper.rb --- 11 строк
 \item app/controllers/web/application\_controller.rb --- 8 строк
+\item app/views/layouts/web/application.html.haml --- 12 строк
 \end{enumerate}

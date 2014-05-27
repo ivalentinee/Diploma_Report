@@ -1,0 +1,66 @@
+app/views/web/invitations/index.html.haml --- 18 lines
+app/views/web/invitations/show.html.haml --- 4 lines
+app/views/web/invitations/accept.html.haml --- 5 lines
+
+app/views/web/characters/index.html.haml --- 20 строк
+app/views/web/characters/new.html.haml --- 3 строк
+app/views/web/characters/edit.html.haml --- 5 строк
+app/views/web/characters/show.html.haml --- 11 строк
+app/views/web/characters/\_form.html.haml --- 62 строк
+
+app/views/web/games/new.html.haml --- 3 строк
+app/views/web/games/index.html.haml --- 19 строк
+app/views/web/games/edit.html.haml --- 5 строк
+app/views/web/games/show.html.haml --- 30 строк
+app/views/web/games/\_form.html.haml --- 10 строк
+
+app/views/web/games/comments/\_form.html.haml --- 3 строк
+app/views/web/games/comments/\_comment.html.haml --- 6 строк
+
+app/views/web/games/invitations/index.html.haml --- 12 строк
+app/views/web/games/invitations/new.html.haml --- 3 строк
+app/views/web/games/invitations/show.html.haml --- 3 строк
+app/views/web/games/invitations/\_form.html.haml --- 4 строк
+
+app/views/web/games/sessions/index.html.haml --- 13 строк
+app/views/web/games/sessions/new.html.haml --- 3 строки
+app/views/web/games/sessions/edit.html.haml --- 5 строк
+app/views/web/games/sessions/show.html.haml --- 13 строк
+app/views/web/games/sessions/\_form.html.haml --- 8 строк
+
+app/views/web/games/sessions/comments/\_form.html.haml --- 3 строк
+app/views/web/games/sessions/comments/\_comment.html.haml --- 6 строк
+
+app/views/web/application/\_requirement\_form.html.haml --- 7 строк
+app/views/web/application/\_modifier\_form.html.haml --- 7 строк
+app/views/web/application/\_property\_skill\_fields.html.haml --- 10 строк
+app/views/web/application/\_property\_ability\_fields.html.haml --- 10 строк
+
+app/views/web/klasses/index.html.haml --- 13 строк
+app/views/web/klasses/new.html.haml --- 4 строк
+app/views/web/klasses/edit.html.haml --- 6 строк
+app/views/web/klasses/show.html.haml --- 4 строк
+app/views/web/klasses/\_form.html.haml --- 26 строк
+
+app/views/web/klasses/\_level\_fields.html.haml --- 12 строк
+
+app/views/web/races/index.html.haml --- 13 строк
+app/views/web/races/new.html.haml --- 3 строки
+app/views/web/races/edit.html.haml --- 5 строк
+app/views/web/races/show.html.haml --- 4 строки
+app/views/web/races/\_form.html.haml --- 8 строк
+
+app/views/web/users/index.html.haml --- 14 строк
+app/views/web/users/edit.html.haml --- 5 строк
+app/views/web/users/show.html.haml --- 6 строк
+app/views/web/users/\_form.html.haml --- 10 строк
+
+app/views/web/users/characters/index.html.haml --- 15 строк
+
+app/views/web/users/games/index.html.haml --- 12 строк
+
+app/views/web/application/\_navbar.html.haml --- 7 строк
+app/views/web/pages/about.en.html.haml --- 2 строк
+app/views/web/pages/index.en.html.haml --- 5 строк
+app/views/web/pages/about.ru.html.haml --- 2 строк
+app/views/web/pages/index.ru.html.haml --- 5 строк

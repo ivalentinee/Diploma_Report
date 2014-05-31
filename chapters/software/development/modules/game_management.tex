@@ -1,6 +1,81 @@
-\subsubsection{Программный модуль \textbf{Управление игровым процессом}}
+\subsubsection{Модуль \textbf{Управление игровым процессом}}
 
-Данный программный модуль содержит 317 строк кода.
+Данный модуль предоставляет возможность создания, редактирования, отображения и удаления игр и игровых сессий. Модуль содержит 317 строк кода.
+
+\begin{longtable}[h]{| p{0.42\textwidth} | p{0.08\textwidth} | p{0.42\textwidth} |}
+\caption{\label{tab:game_management_files}Файлы модуля \textbf{Управление игровым процессом}.} \\
+  \hline
+  \textbf{Имя файла}  &  \textbf{Число строк}  &  \textbf{Описание} \\
+\endfirsthead
+\tableContinue{3} \\
+  \hline
+  \textbf{Имя файла}  &  \textbf{Число строк}  &  \textbf{Описание} \\
+  \hline
+\endhead
+  \hline
+  app/controllers/web/ games\_controller.rb   &   27  &  CRUD-контроллер игр \\
+  \hline
+  app/controllers/web/games/ sessions\_controller.rb   &   28  &  CRUD-контроллер игровых сессий \\
+  \hline
+  app/controllers/web/ invitations\_controller.rb   &   21  &  Контроллер приглашений в игру \\
+  \hline
+  app/controllers/web/games/ application\_controller.rb   &   3  &  Общие методы контроллеров игр \\
+  \hline
+  app/controllers/web/games/ invitations\_controller.rb   &   22  &  Контроллер доступа к приглашениям конкретной игры \\
+  \hline
+  app/controllers/web/games/sessions/ application\_controller.rb   &   3  &  Общие методы контроллеров игровых сессий \\
+  \hline
+  app/controllers/web/users/ games\_controller.rb   &   4  &  Контроллер доступа к играм конкретного пользователя \\
+  \hline
+  app/helpers/web/invitations\_helper.rb   &   5  &  Вспомогательные методы контроллера пришлашений в игру \\
+  \hline
+  app/models/game.rb   &   8  &  Модель игры \\
+  \hline
+  app/models/game\_character.rb   &   4  &  Модель отношения <<Персонаж --- Игра>> \\
+  \hline
+  app/models/invitation.rb   &   5  &  Модель приглашения в игру \\
+  \hline
+  app/models/session.rb   &   8  &  Модель игровой сессии \\
+  \hline
+  app/repositories/game\_repository.rb   &   9  &  Методы доступа модели игры \\
+  \hline
+  app/views/web/invitations/ index.html.haml   &   18  &  Страница списка приглашений \\
+  \hline
+  app/views/web/invitations/ show.html.haml   &   4  &  Страница отображения приглашения \\
+  \hline
+  app/views/web/invitations/ accept.html.haml   &   5  &  Форма принятия приглашения \\
+  \hline
+  app/views/web/games/new.html.haml   &   3  &  Страница создания игры \\
+  \hline
+  app/views/web/games/ index.html.haml   &   19  &  Страница списка игр \\
+  \hline
+  app/views/web/games/edit.html.haml   &   5  &  Страница редактирования игры \\
+  \hline
+  app/views/web/games/ show.html.haml   &   30  &  Страница отображения игры\\
+  \hline
+  app/views/web/games/ \_form.html.haml   &   10  &  Форма редактировния игры \\
+  \hline
+  app/views/web/games/invitations/ index.html.haml   &   12  &  Страница списка приглашений игры \\
+  \hline
+  app/views/web/games/invitations/ new.html.haml   &   3  &  Страница создания приглашения игры \\
+  \hline
+  app/views/web/games/invitations/ show.html.haml   &   3  &  Страница отображения приглашения игры \\
+  \hline
+  app/views/web/games/invitations/ \_form.html.haml   &   4  &  Форма редактировния приглашения игры \\
+  \hline
+  app/views/web/games/sessions/ index.html.haml   &   13  &  Страница списка сессий игры \\
+  \hline
+  app/views/web/games/sessions/ new.html.haml   &   3  &  Страница создания сессии игры \\
+  \hline
+  app/views/web/games/sessions/ edit.html.haml   &   5  &  Страница редактирования сессии игры \\
+  \hline
+  app/views/web/games/sessions/ show.html.haml   &   13  &  Страница отображения сессии игры \\
+  \hline
+  app/views/web/games/sessions/ \_form.html.haml   &   8  &  Форма редактировния сессии игры \\
+  \hline
+  app/views/web/users/games/ index.html.haml   &   12  &  Страница списка игр пользователя \\
+  \hline
+\end{longtable}
 
 \begin{longtable}[h]{| p{0.04\textwidth} | p{0.41\textwidth} | p{0.46\textwidth} |}
 \caption{\label{tab:game_management_specification}Спецификация модуля \textbf{Управление игровым процессом}.} \\

@@ -1,6 +1,23 @@
-\subsubsection{Программный модуль \textbf{Аутентификация пользователей в системе}}
+\subsubsection{Модуль \textbf{Аутентификация пользователей в системе}}
 
-Данный программный модуль содержит 30 строк кода.
+Данный модуль предоставляет возможность аутентификации в системе. Для аутентификации используется сервис Google. Модуль содержит 30 строк кода.
+
+\begin{longtable}[h]{| p{0.42\textwidth} | p{0.08\textwidth} | p{0.42\textwidth} |}
+\caption{\label{tab:auth_data_files}Файлы модуля \textbf{Аутентификация пользователей в системе}.} \\
+  \hline
+  \textbf{Имя файла}  &  \textbf{Число строк}  &  \textbf{Описание} \\
+\endfirsthead
+\tableContinue{3} \\
+  \hline
+  \textbf{Имя файла}  &  \textbf{Число строк}  &  \textbf{Описание} \\
+  \hline
+\endhead
+  \hline
+  app/controllers/web/games/ sessions\_controller.rb  &  28  &  Контроллер, отвечающий за обработку аутентификационных данных \\
+  \hline
+  app/models/auth\_data.rb  &  2  &  Модель, отвечающая за хранение аутентификационных данных \\
+  \hline
+\end{longtable}
 
 \begin{longtable}[h]{| p{0.04\textwidth} | p{0.41\textwidth} | p{0.46\textwidth} |}
 \caption{\label{tab:auth_data_specification}Спецификация модуля \textbf{Аутентификация пользователей в системе}.} \\

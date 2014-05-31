@@ -1,3 +1,30 @@
-\subsubsection{Программный модуль \textbf{Управление учётными записями}}
+\subsubsection{Модуль \textbf{Управление учётными записями}}
 
-Данный программный модуль содержит 73 строки кода.
+Модуль отвечает за создание, редактирование и удаление пользователей. Модуль содержит 73 строки кода.
+
+\begin{longtable}[h]{| p{0.42\textwidth} | p{0.08\textwidth} | p{0.42\textwidth} |}
+\caption{\label{tab:users_files}Файлы модуля \textbf{Управление учётными записями}.} \\
+  \hline
+  \textbf{Имя файла}  &  \textbf{Число строк}  &  \textbf{Описание} \\
+\endfirsthead
+\tableContinue{3} \\
+  \hline
+  \textbf{Имя файла}  &  \textbf{Число строк}  &  \textbf{Описание} \\
+  \hline
+\endhead
+  \hline
+  app/controllers/web/ users\_controller.rb  &  18  &  CRUD-контроллер пользователей \\
+  \hline
+  app/models/user.rb  &  15  &  Модель пользователя \\
+  \hline
+  app/repositories/user\_repository.rb  &  5  &  Методы доступа модели пользователя \\
+  \hline
+  app/views/web/users/ index.html.haml  &  14  &  Страница списка пользователей \\
+  \hline
+  app/views/web/users/edit.html.haml  &  5  &  Страница редактирования пользователя \\
+  \hline
+  app/views/web/users/ show.html.haml  &  6  &  Страница отображения пользователя \\
+  \hline
+  app/views/web/users/ \_form.html.haml  &  10  &  Форма редактирования пользователя \\
+  \hline
+\end{longtable}

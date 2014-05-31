@@ -1,3 +1,30 @@
-\subsubsection{Программный модуль \textbf{Записей игры}}
+\subsubsection{Модуль \textbf{Записей игры}}
 
-Данный программный модуль содержит 56 строк кода.
+Данный модуль предоставляет возможность добавления заметок к играм и игровым сессиям. Модуль содержит 56 строк кода.
+
+\begin{longtable}[h]{| p{0.42\textwidth} | p{0.08\textwidth} | p{0.42\textwidth} |}
+\caption{\label{tab:comments_files}Файлы модуля \textbf{Записей игры}.} \\
+  \hline
+  \textbf{Имя файла}  &  \textbf{Число строк}  &  \textbf{Описание} \\
+\endfirsthead
+\tableContinue{3} \\
+  \hline
+  \textbf{Имя файла}  &  \textbf{Число строк}  &  \textbf{Описание} \\
+  \hline
+\endhead
+  \hline
+  app/controllers/web/games/ comments\_controller.rb  &  17  &  CRUD-контроллер комментариев к игре \\
+  \hline
+  app/controllers/web/games/sessions/ comments\_controller.rb  &  18  &  CRUD-контроллер комментариев к игровой сессии \\
+  \hline
+  app/models/comment.rb  &  3  &  Модель комментария \\
+  \hline
+  app/views/web/games/comments/ \_form.html.haml  &  3  &  Форма редактирования комментария к игре \\
+  \hline
+  app/views/web/games/comments/ \_comment.html.haml  &  6  &  Шаблон отображения комментария к игре \\
+  \hline
+  app/views/web/games/sessions/ comments/\_form.html.haml  &  3  &  Форма редактирования комментария к игровой сессии \\
+  \hline
+  app/views/web/games/sessions/ comments/\_comment.html.haml  &  6  &  Шаблон отображения комментария к игровой сессии \\
+  \hline
+\end{longtable}

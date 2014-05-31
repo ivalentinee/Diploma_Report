@@ -1,6 +1,47 @@
-\subsubsection{Программный модуль \textbf{Автоматизированное создание персонажей}}
+\subsubsection{Модуль \textbf{Автоматизированное создание персонажей}}
 
-Данный программный модуль содержит 268 строк кода.
+Данный модуль предоставляет возможность создания, редактирования, отображения и удаления общеигровых данных с частичной автоматизацией. Модуль содержит 268 строк кода.
+
+\begin{longtable}[h]{| p{0.42\textwidth} | p{0.08\textwidth} | p{0.42\textwidth} |}
+\caption{\label{tab:character_builder_files}Файлы модуля \textbf{Автоматизированное создание персонажей}.} \\
+  \hline
+  \textbf{Имя файла}  &  \textbf{Число строк}  &  \textbf{Описание} \\
+\endfirsthead
+\tableContinue{3} \\
+  \hline
+  \textbf{Имя файла}  &  \textbf{Число строк}  &  \textbf{Описание} \\
+  \hline
+\endhead
+  \hline
+  app/controllers/api/ characters\_controller.rb  &  24  &  Контроллер доступа к данным персонажей API \\
+  \hline
+  app/controllers/web/ characters\_controller.rb  &  16  &  Контроллер доступа к данным персонажей \\
+  \hline
+  app/controllers/web/users/ characters\_controller.rb  &  4  &  Контроллер доступа к данным персонажей пользователя \\
+  \hline
+  app/models/character.rb  &  8  &  Модель персонажа \\
+  \hline
+  app/models/charlevel.rb  &  5  &  Модель уровня персонажа \\
+  \hline
+  app/repositories/ character\_repository.rb  &  4  &  Методы доступа модели персонажа \\
+  \hline
+  app/assets/javascripts/angular/ app.js.coffee  &  1  &  Инициализация angular-приложения \\
+  \hline
+  app/assets/javascripts/angular/ controllers/character\_builder.js.coffee  &  90  &  Редактор персонажа \\
+  \hline
+  app/views/web/characters/ index.html.haml  &  20  &  Страница списка персонажей \\
+  \hline
+  app/views/web/characters/ new.html.haml  &  3  &  Страница создания персонажа \\
+  \hline
+  app/views/web/characters/ edit.html.haml  &  5  &  Страница редактирования персонажа \\
+  \hline
+  app/views/web/characters/ show.html.haml  &  11  &  Страница отображения персонажа \\
+  \hline
+  app/views/web/characters/ \_form.html.haml  &  62  &  Форма редактирования персонажа \\
+  \hline
+  app/views/web/users/characters/ index.html.haml  &  15  &  Страница списка персонажей пользователя \\
+  \hline
+\end{longtable}
 
 \begin{longtable}[h]{| p{0.04\textwidth} | p{0.41\textwidth} | p{0.46\textwidth} |}
 \caption{\label{tab:character_builder_specification}Спецификация модуля \textbf{Автоматизированное создание персонажей}.} \\

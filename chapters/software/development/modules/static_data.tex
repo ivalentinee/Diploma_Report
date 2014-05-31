@@ -1,6 +1,85 @@
-\subsubsection{Программный модуль \textbf{Общеигровые данные}}
+\subsubsection{Модуль \textbf{Общеигровые данные}}
 
-Данный программный модуль содержит 259 строк кода.
+Данный модуль предоставляет возможность создания, редактирования, отображения и удаления общеигровых данных. Модуль содержит 259 строк кода.
+
+\begin{longtable}[h]{| p{0.42\textwidth} | p{0.08\textwidth} | p{0.42\textwidth} |}
+\caption{\label{tab:static_data_files}Файлы модуля \textbf{Общеигровые данные}.} \\
+  \hline
+  \textbf{Имя файла}  &  \textbf{Число строк}  &  \textbf{Описание} \\
+\endfirsthead
+\tableContinue{3} \\
+  \hline
+  \textbf{Имя файла}  &  \textbf{Число строк}  &  \textbf{Описание} \\
+  \hline
+\endhead
+  \hline
+  app/controllers/api/ properties\_controller.rb  &  12  &  Контроллен доступа к свойствам \\
+  \hline
+  app/controllers/web/ races\_controller.rb  &  25  &  CRUD-контроллер рас \\
+  \hline
+  app/controllers/web/ klasses\_controller.rb  &  27  &  CRUD-контроллер классов \\
+  \hline
+  app/controllers/api/ races\_controller.rb  &  8  &  Контроллен доступа к расам \\
+  \hline
+  app/models/klass.rb  &  3  &  Модель класса \\
+  \hline
+  app/models/level.rb  &  2  &  Модель уровня класса \\
+  \hline
+  app/models/modifier.rb  &  3  &  Модель модификатора \\
+  \hline
+  app/models/property.rb  &  2  &  Модель свойства \\
+  \hline
+  app/models/race.rb  &  3  &  Модель расы \\
+  \hline
+  app/repositories/ property\_repository.rb  &  5  &  Методы доступа модели свойства \\
+  \hline
+  app/assets/javascripts/web/ klasses.js.coffee  &  24  &  Редактор классов \\
+  \hline
+  app/views/api/application/ \_modifiers.json.jbuilder  &  3  &  Шаблон ответа API-контроллера списка модификаторов \\
+  \hline
+  app/views/api/classes/ \_levels.json.jbuilder  &  4  &  Шаблон ответа API-контроллера списка уровней класса \\
+  \hline
+  app/views/api/classes/ index.json.jbuilder  &  4  &  Шаблон ответа API-контроллера списка классов \\
+  \hline
+  app/views/api/classes/ show.json.jbuilder  &  3  &  Шаблон ответа API-контроллера класса \\
+  \hline
+  app/views/api/properties/ index.json.jbuilder  &  1  &  Шаблон ответа API-контроллера списка свойств \\
+  \hline
+  app/views/api/properties/ show.json.jbuilder  &  1  &  Шаблон ответа API-контроллера свойства \\
+  \hline
+  app/views/api/races/ index.json.jbuilder  &  1  &  Шаблон ответа API-контроллера списка рас \\
+  \hline
+  app/views/api/races/ show.json.jbuilder  &  3  &  Шаблон ответа API-контроллера расы \\
+  \hline
+  app/views/web/application/ \_modifier\_form.html.haml  &  7  &  Форма добавления модификатора \\
+  \hline
+  app/views/web/application/ \_property\_skill\_fields.html.haml  &  10  &  Форма добавления уровня навыка \\
+  \hline
+  app/views/web/application/ \_property\_ability\_fields.html.haml  &  10  &  Форма добавления уровня способности \\
+  \hline
+  app/views/web/klasses/ index.html.haml  &  13  &  Страница списка классов \\
+  \hline
+  app/views/web/klasses/ new.html.haml  &  4  &  Страница создания класса \\
+  \hline
+  app/views/web/klasses/ edit.html.haml  &  6  &  Страница редактирования класса \\
+  \hline
+  app/views/web/klasses/ show.html.haml  &  4  &  Страница отображения класса \\
+  \hline
+  app/views/web/klasses/ \_form.html.haml  &  26  &  Форма редактирования класса \\
+  \hline
+  app/views/web/klasses/ \_level\_fields.html.haml  &  12  &  Форма редактирования уровня класса \\
+  \hline
+  app/views/web/races/index.html.haml  &  13  &  Страница списка рас \\
+  \hline
+  app/views/web/races/new.html.haml  &  3  &  Страница создания расы \\
+  \hline
+  app/views/web/races/edit.html.haml  &  5  &  Страница редактирования расы \\
+  \hline
+  app/views/web/races/show.html.haml  &  4  &  Страница отображения расы \\
+  \hline
+  app/views/web/races/ \_form.html.haml  &  8  &  Форма редактирования расы \\
+  \hline
+\end{longtable}
 
 \begin{longtable}[h]{| p{0.04\textwidth} | p{0.41\textwidth} | p{0.46\textwidth} |}
 \caption{\label{tab:static_data_specification}Спецификация модуля \textbf{Общеигровые данные}.} \\

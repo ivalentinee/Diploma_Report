@@ -39,17 +39,15 @@
 \renewcommand{\labelenumi}{\arabic{enumi}.}
 \renewcommand{\labelenumii}{\asbuk{enumii}.}
 
-% Включаемый переност строки
-\newtoggle{breakpage}
 
-\newcommand{\condbreak}{
-  \iftoggle{breakpage}{
-    \pagebreak
-  }
-}
 
-% Включение/выключение переноса строки
+\input{toggles.tex}
+
 \toggletrue{breakpage}
+\togglefalse{annotation}
+\togglefalse{conclusion}
+
+
 
 \newcommand{\dnd}{D\&D}
 

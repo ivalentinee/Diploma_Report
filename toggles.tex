@@ -1,0 +1,14 @@
+% Включаемый переност строки
+\newtoggle{breakpage}
+
+\newcommand{\condbreak}{
+  \iftoggle{breakpage}{
+    \pagebreak
+  }
+}
+
+% Включает аннотацию
+\newtoggle{annotation}
+
+% Включает заключение
+\newtoggle{conclusion}

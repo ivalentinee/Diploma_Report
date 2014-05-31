@@ -12,6 +12,10 @@
 
 \input{task_2.tex}
 
+\iftoggle{annotation}{
+  \input{annotation.tex}
+}
+
 \ESKDstyle{formII}
 \begin{ESKDtitlePage}\end{ESKDtitlePage}
 \tableofcontents
@@ -37,7 +41,9 @@
 
 \import{chapters/}{safety}
 
-\import{chapters/}{conclusion}
+\iftoggle{conclusion}{
+  \import{chapters/}{conclusion}
+}
 
 \import{chapters/}{sources}
 

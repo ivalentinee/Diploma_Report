@@ -1,0 +1,40 @@
+\subsubsection{Программный модуль \textbf{Автоматизированное создание персонажей}}
+
+Данный программный модуль содержит 268 строк кода.
+
+\begin{longtable}[h]{| p{0.04\textwidth} | p{0.41\textwidth} | p{0.46\textwidth} |}
+\caption{\label{tab:character_builder_specification}Спецификация модуля \textbf{Автоматизированное создание персонажей}.} \\
+  \hline
+  \textbf{№}  &  \textbf{Название и тип элемента}  &  \textbf{Описание} \\
+\endfirsthead
+\tableContinue{3} \\
+  \hline
+  \textbf{№}  &  \textbf{Название и тип элемента}  &  \textbf{Описание} \\
+  \hline
+\endhead
+  \hline
+  \multicolumn{3}{|c|}{\textbf{Подпрограммы}} \\
+  \hline
+  1   &  buildResponse   &  Составляет json-описание персонажа для отправки на сервер \\
+  \hline
+  2   &  buildLevelsForResponse  &  Составляет json-описание уровней персонажа для отправки на сервер \\
+  \hline
+  3   &  buildModifiersForResponse  &  Составляет json-описание модификаторов персонажа для отправки на сервер \\
+  \hline
+  4   &  character.addLevel  &  Добавляет уровень персонажу \\
+  \hline
+  5   &  character.removeLevel  &  Удаляет последний уровень персонажа \\
+  \hline
+  6   &  \$scope.addSkillModifier  &  Добавляет модификатор умения для уровня \\
+  \hline
+  7   &  \$scope.removeSkill  &  Удаляет выбранный модификатор умения для уровня \\
+  \hline
+  8   &  \$scope.skillPointsLeft  &  Вычисляет количество очков умений, доступных для распределения \\
+  \hline
+  9   &  character.save  &  Отправляет json-описание персонажа на сервер для сохранения \\
+  \hline
+  10  &  character.save  &  Отправляет json-описание персонажа на сервер для сохранения \\
+  \hline
+  11  &  abilityModifier  &  Вычисляет модификатор способности персонажа \\
+  \hline
+\end{longtable}
